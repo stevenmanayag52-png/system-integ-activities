@@ -1,4 +1,5 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -14,12 +15,16 @@ export default defineNuxtConfig({
         transformAssetUrls,
       },
     },
+    
+    optimizeDeps: {
+      include: ['qr-scanner']
+    },
+    assetsInclude: ['**/*.worker.js']
   },
-
   runtimeConfig: {
-    public:{
+    public: {
       //@ts-ignore
-      googleClientId: process.env.NUXT_PUBLIC_GOOGLE_CLIENT_ID 
+      googleClientId: process.env.NUXT_PUBLIC_GOOGLE_CLIENT_ID
     }
   }
 })

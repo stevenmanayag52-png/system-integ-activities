@@ -114,4 +114,3 @@ const stopScan = () => {
 .start { background: #16a34a; color: white; }
 .stop { background: #dc2626; color: white; }
 </style>
-

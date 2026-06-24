@@ -3,15 +3,15 @@
     <h2>QR Code Information</h2>
 
     <div v-if="qrData" class="result-box">
-      <p>Nabasang Impormasyon:</p>
+      <p>Read the Information:</p>
       <pre>{{ qrData }}</pre>
     </div>
 
     <div v-else class="no-data">
-      <p>Walang nabasang QR code.</p>
+      <p>not read the  QR code.</p>
     </div>
 
-    <button @click="goBack" class="btn back">Bumalik sa Scan</button>
+    <button @click="goBack" class="btn back">Back to Scan</button>
   </div>
 </template>
 

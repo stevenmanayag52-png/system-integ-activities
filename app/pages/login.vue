@@ -15,6 +15,7 @@
       style="max-width: 500px; margin: 20px auto;"
     />
     <v-btn block variant="tonal" color="primary" style="margin-top: 20px;">Login</v-btn>
+     
 
     <h3  style="margin-top: 30px;">Or</h3>
     <v-btn block variant="elevated" color="red" style="margin-top: 10px;" 
@@ -28,6 +29,9 @@
 
 <script lang="ts" setup>
 //@ts-nocheck
+definePageMeta({
+  middleware: 'auth'
+})
 
 const config = useRuntimeConfig()
 
